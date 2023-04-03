@@ -1,0 +1,60 @@
+@import url("normalize.css");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+body {
+  display: grid;
+  width: 1440px;
+  grid-template-rows: 768px 1536px 476px 768px 1536px 350px;
+  background-color: #fff;
+  grid-template-areas: "eCom" "whatWeDo" "howItWorks" "whatTheySay" "enjoy" "footer";
+}
+body .eCom {
+  grid-area: eCom;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom, #daeaf6, white);
+}
+body .eCom__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+}
+body .eCom__header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 20%;
+}
+body .whatWeDo {
+  grid-area: whatWeDo;
+  display: flex;
+  width: 100%;
+  box-shadow: inset 10px 10px 5px #666666;
+}
+body .HowItWorks {
+  grid-area: howItWorks;
+  display: flex;
+  width: 100%;
+}
+body .whatTheySay {
+  grid-area: whatTheySay;
+  display: flex;
+  width: 100%;
+}
+body .enjoy {
+  grid-area: enjoy;
+  display: flex;
+  width: 100%;
+}
+body footer {
+  grid-area: footer;
+  font-size: 26px;
+  color: #fff;
+  background-color: #4a99d3;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=styles.css.map */

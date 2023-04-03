@@ -1,0 +1,79 @@
+@import url("normalize.css");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+$h: 50px;
+$fz: 26px;
+$main-color: #4a99d3;
+$main-light: lighten($main-color, 35%);
+
+body {
+  display: grid;
+  width: 1440px;
+  grid-template-rows: 768px 1536px 476px 768px 1536px 350px;
+  background-color: #fff;
+  grid-template-areas:
+    "eCom"
+    "whatWeDo"
+    "howItWorks"
+    "whatTheySay"
+    "enjoy"
+    "footer";
+
+  .eCom {
+    grid-area: eCom;
+    display: flex;
+    flex-direction: column;
+
+    background: linear-gradient(to bottom, $main-light, white);
+
+    &__header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      height: 100px;
+      width: 100%;
+
+      nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 20%;
+      }
+    }
+  }
+  .whatWeDo {
+    grid-area: whatWeDo;
+    display: flex;
+    width: 100%;
+    box-shadow: inset 10px 10px 5px #666666;
+  }
+  .HowItWorks {
+    grid-area: howItWorks;
+    display: flex;
+    width: 100%;
+  }
+  .whatTheySay {
+    grid-area: whatTheySay;
+    display: flex;
+    width: 100%;
+  }
+  .enjoy {
+    grid-area: enjoy;
+    display: flex;
+    width: 100%;
+  }
+
+  footer {
+    grid-area: footer;
+    font-size: $fz;
+
+    color: #fff;
+    background-color: #4a99d3;
+
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
