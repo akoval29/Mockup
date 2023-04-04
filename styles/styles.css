@@ -264,7 +264,7 @@ body .main .whatTheySay__container-1 img {
   height: 519px;
   width: 399px;
   top: 0;
-  left: 0;
+  left: 20%;
 }
 body .main .whatTheySay__container-2 {
   position: relative;
@@ -292,12 +292,83 @@ body .main .whatTheySay__container-2 h1 {
 body .main .enjoy {
   grid-area: enjoy;
   display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+body .main .enjoy__construct--blue {
+  position: absolute;
+  bottom: -6%;
+  left: 0;
+}
+body .main .enjoy__construct--brown {
+  position: absolute;
+  bottom: -6%;
+  right: 0;
+}
+body .main .enjoy__container-1 {
+  position: relative;
+  height: 535px;
+  width: 600px;
+  border: 2px dotted rgb(0, 17, 255);
+  margin-right: 60px;
+}
+body .main .enjoy__container-1__mobile-1 {
+  position: absolute;
+  max-height: 535px;
+  max-width: 280px;
+  bottom: 0;
+  right: 30%;
+  z-index: 1;
+}
+body .main .enjoy__container-1__mobile-2 {
+  position: absolute;
+  max-height: 460px;
+  max-width: 240px;
+  top: 7%;
+  right: 0;
+}
+body .main .enjoy__container-1__mobile-3 {
+  position: absolute;
+  max-height: 460px;
+  max-width: 240px;
+  top: 7%;
+  left: 0;
+}
+body .main .enjoy__container-2 {
+  position: relative;
+  height: 535px;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  border: 2px dotted rgb(226, 174, 61);
+}
+body .main .enjoy__container-2__wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+body .main .enjoy__container-2__wrap > * {
+  margin-bottom: 20px;
+  text-align: center;
+}
+body .main .enjoy__container-2__wrap h1 {
+  font-size: 26px;
+}
+body .main .enjoy__container-2__wrap__btn-1 {
+  max-width: 180px;
+  max-height: 60px;
+  margin-right: 10px;
+}
+body .main .enjoy__container-2__wrap__btn-2 {
+  max-width: 180px;
+  max-height: 60px;
+  margin-right: 10px;
 }
 body .main footer {
   grid-area: footer;
   font-size: 26px;
   color: #fff;
   background-color: #4a99d3;
+  z-index: 1;
   bottom: 0;
   display: flex;
   justify-content: center;
