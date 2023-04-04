@@ -14,10 +14,9 @@ body {
   .main {
     display: grid;
     max-width: 1440px;
-    // max-width: 100%;
     grid-template-rows: 768px 1536px 476px 768px 1536px 350px;
     background-color: #fff;
-
+    border: 3px dotted red;
     grid-template-areas:
       "eCom"
       "whatWeDo"
@@ -25,13 +24,11 @@ body {
       "whatTheySay"
       "enjoy"
       "footer";
-
     .eCom {
       grid-area: eCom;
       display: flex;
       flex-direction: column;
       background: linear-gradient(to bottom, $main-light, white);
-
       &__header {
         display: flex;
         flex-direction: row;
@@ -39,12 +36,10 @@ body {
         justify-content: space-around;
         align-items: center;
         width: 100%;
-
         h4 {
           color: $main-color;
           font-size: 40px;
         }
-
         nav {
           display: flex;
           flex-direction: row;
@@ -60,13 +55,11 @@ body {
         position: relative;
         margin: 0px 5% 5% 12%;
         justify-content: center;
-
         &__content {
           display: flex;
           align-items: center;
           &__wrap {
             margin-bottom: 30px;
-
             h1 {
               font-size: 70px;
               margin-bottom: 20px;
@@ -104,11 +97,43 @@ body {
     .whatWeDo {
       grid-area: whatWeDo;
       display: flex;
-      width: 100%;
-      box-shadow: inset 10px 10px 5px #666666;
+      box-shadow: inset 0px 7px 30px -30px rgba(0, 0, 0, 0.75);
+      position: relative;
+      &__construct {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        &--blue {
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+      }
+      &__dottedShit {
+        position: absolute;
+        max-width: 200px;
+        max-height: 200px;
+        top: 5.2%;
+        right: 10%;
+        &--mid {
+          position: absolute;
+          max-width: 200px;
+          max-height: 200px;
+          top: 50%;
+          left: 20%;
+        }
+        &--bottom {
+          position: absolute;
+          max-width: 200px;
+          max-height: 200px;
+          bottom: 5%;
+          right: 10%;
+        }
+      }
     }
-    .HowItWorks {
+    .howItWorks {
       grid-area: howItWorks;
+      background-color: $main-light;
       display: flex;
       width: 100%;
     }

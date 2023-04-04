@@ -10,6 +10,7 @@ body .main {
   max-width: 1440px;
   grid-template-rows: 768px 1536px 476px 768px 1536px 350px;
   background-color: #fff;
+  border: 3px dotted red;
   grid-template-areas: "eCom" "whatWeDo" "howItWorks" "whatTheySay" "enjoy" "footer";
 }
 body .main .eCom {
@@ -83,11 +84,43 @@ body .main .eCom__container__images .mobile--large {
 body .main .whatWeDo {
   grid-area: whatWeDo;
   display: flex;
-  width: 100%;
-  box-shadow: inset 10px 10px 5px #666666;
+  box-shadow: inset 0px 7px 30px -30px rgba(0, 0, 0, 0.75);
+  position: relative;
 }
-body .main .HowItWorks {
+body .main .whatWeDo__construct {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+body .main .whatWeDo__construct--blue {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+body .main .whatWeDo__dottedShit {
+  position: absolute;
+  max-width: 200px;
+  max-height: 200px;
+  top: 5.2%;
+  right: 10%;
+}
+body .main .whatWeDo__dottedShit--mid {
+  position: absolute;
+  max-width: 200px;
+  max-height: 200px;
+  top: 50%;
+  left: 20%;
+}
+body .main .whatWeDo__dottedShit--bottom {
+  position: absolute;
+  max-width: 200px;
+  max-height: 200px;
+  bottom: 5%;
+  right: 10%;
+}
+body .main .howItWorks {
   grid-area: howItWorks;
+  background-color: #daeaf6;
   display: flex;
   width: 100%;
 }
