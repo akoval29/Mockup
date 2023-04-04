@@ -1,54 +1,107 @@
 @import url("normalize.css");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 body {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+}
+body .main {
   display: grid;
-  width: 1440px;
+  max-width: 1440px;
   grid-template-rows: 768px 1536px 476px 768px 1536px 350px;
   background-color: #fff;
   grid-template-areas: "eCom" "whatWeDo" "howItWorks" "whatTheySay" "enjoy" "footer";
 }
-body .eCom {
+body .main .eCom {
   grid-area: eCom;
   display: flex;
   flex-direction: column;
   background: linear-gradient(to bottom, #daeaf6, white);
 }
-body .eCom__header {
+body .main .eCom__header {
   display: flex;
   flex-direction: row;
+  height: 15%;
   justify-content: space-around;
   align-items: center;
-  height: 100px;
   width: 100%;
 }
-body .eCom__header nav {
+body .main .eCom__header h4 {
+  color: #4a99d3;
+  font-size: 40px;
+}
+body .main .eCom__header nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 20%;
+  font-size: 20px;
 }
-body .whatWeDo {
+body .main .eCom__container {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  height: 85%;
+  position: relative;
+  margin: 0px 5% 5% 12%;
+  justify-content: center;
+}
+body .main .eCom__container__content {
+  display: flex;
+  align-items: center;
+}
+body .main .eCom__container__content__wrap {
+  margin-bottom: 30px;
+}
+body .main .eCom__container__content__wrap h1 {
+  font-size: 70px;
+  margin-bottom: 20px;
+}
+body .main .eCom__container__content__wrap p {
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+body .main .eCom__container__content__wrap__btn {
+  max-width: 180px;
+  max-height: 60px;
+  margin-right: 10px;
+}
+body .main .eCom__container__images .mobile {
+  position: absolute;
+  max-height: 460px;
+  max-width: 240px;
+  bottom: 0;
+  right: 200px;
+  z-index: 1;
+}
+body .main .eCom__container__images .mobile--large {
+  position: absolute;
+  max-height: 535px;
+  max-width: 280px;
+  bottom: 0;
+  right: 0;
+}
+body .main .whatWeDo {
   grid-area: whatWeDo;
   display: flex;
   width: 100%;
   box-shadow: inset 10px 10px 5px #666666;
 }
-body .HowItWorks {
+body .main .HowItWorks {
   grid-area: howItWorks;
   display: flex;
   width: 100%;
 }
-body .whatTheySay {
+body .main .whatTheySay {
   grid-area: whatTheySay;
   display: flex;
   width: 100%;
 }
-body .enjoy {
+body .main .enjoy {
   grid-area: enjoy;
   display: flex;
   width: 100%;
 }
-body footer {
+body .main footer {
   grid-area: footer;
   font-size: 26px;
   color: #fff;
