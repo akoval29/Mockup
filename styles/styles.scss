@@ -225,17 +225,34 @@ body {
       grid-area: howItWorks;
       background-color: $main-light;
       display: flex;
-      width: 100%;
+      flex-wrap: wrap;
+      h1 {
+        color: $main-color;
+        font-size: 27px;
+        text-align: center;
+        width: 100%;
+        height: 50px;
+        line-height: 200px;
+      }
+      &__container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0 10% 0 10%;
+        > * {
+          justify-content: center;
+          text-align: center;
+          width: 20%;
+        }
+      }
     }
     .whatTheySay {
       grid-area: whatTheySay;
       display: flex;
-      width: 100%;
     }
     .enjoy {
       grid-area: enjoy;
       display: flex;
-      width: 100%;
     }
 
     footer {
