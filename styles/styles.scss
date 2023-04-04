@@ -119,24 +119,72 @@ body {
           position: absolute;
           top: 0;
           right: 0;
-          box-shadow: -10px 0px 60px -20px rgba(74, 153, 211, 0.3),
-            10px 0px 60px -20px rgba(74, 153, 211, 0.3),
-            0px 10px 60px -20px rgba(74, 153, 211, 0.3);
+          box-shadow: -10px 0px 60px -20px rgba(74, 153, 211, 0.2),
+            10px 0px 60px -20px rgba(74, 153, 211, 0.2),
+            0px 10px 60px -20px rgba(74, 153, 211, 0.2);
+          h2 {
+            position: absolute;
+            top: 50%;
+            left: 10%;
+          }
+          p {
+            position: absolute;
+            top: 60%;
+            left: 10%;
+            max-width: 70%;
+          }
+          a {
+            position: absolute;
+            bottom: 10%;
+            left: 10%;
+          }
           &--receive {
             position: absolute;
             top: 30%;
             left: 0;
-            box-shadow: -10px 0px 60px -20px rgba(74, 153, 211, 0.3),
-              10px 0px 60px -20px rgba(74, 153, 211, 0.3),
-              0px 10px 60px -20px rgba(74, 153, 211, 0.3);
+            box-shadow: -10px 0px 60px -20px rgba(74, 153, 211, 0.2),
+              10px 0px 60px -20px rgba(74, 153, 211, 0.2),
+              0px 10px 60px -20px rgba(74, 153, 211, 0.2);
+            h2 {
+              position: absolute;
+              top: 50%;
+              left: 10%;
+            }
+            p {
+              position: absolute;
+              top: 60%;
+              left: 10%;
+              max-width: 70%;
+            }
+            a {
+              position: absolute;
+              bottom: 10%;
+              left: 10%;
+            }
           }
           &--buy {
             position: absolute;
             bottom: 0;
             right: 0;
-            box-shadow: -10px 0px 60px -20px rgba(74, 153, 211, 0.3),
-              10px 0px 60px -20px rgba(74, 153, 211, 0.3),
-              0px 10px 60px -20px rgba(74, 153, 211, 0.3);
+            box-shadow: -10px 0px 60px -20px rgba(74, 153, 211, 0.2),
+              10px 0px 60px -20px rgba(74, 153, 211, 0.2),
+              0px 10px 60px -20px rgba(74, 153, 211, 0.2);
+            h2 {
+              position: absolute;
+              top: 50%;
+              left: 10%;
+            }
+            p {
+              position: absolute;
+              top: 60%;
+              left: 10%;
+              max-width: 70%;
+            }
+            a {
+              position: absolute;
+              bottom: 10%;
+              left: 10%;
+            }
           }
         }
       }

@@ -108,19 +108,67 @@ body .main .whatWeDo__wrap__form {
   position: absolute;
   top: 0;
   right: 0;
-  box-shadow: -10px 0px 60px -20px rgba(74, 153, 211, 0.3), 10px 0px 60px -20px rgba(74, 153, 211, 0.3), 0px 10px 60px -20px rgba(74, 153, 211, 0.3);
+  box-shadow: -10px 0px 60px -20px rgba(74, 153, 211, 0.2), 10px 0px 60px -20px rgba(74, 153, 211, 0.2), 0px 10px 60px -20px rgba(74, 153, 211, 0.2);
+}
+body .main .whatWeDo__wrap__form h2 {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+}
+body .main .whatWeDo__wrap__form p {
+  position: absolute;
+  top: 60%;
+  left: 10%;
+  max-width: 70%;
+}
+body .main .whatWeDo__wrap__form a {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
 }
 body .main .whatWeDo__wrap__form--receive {
   position: absolute;
   top: 30%;
   left: 0;
-  box-shadow: -10px 0px 60px -20px rgba(74, 153, 211, 0.3), 10px 0px 60px -20px rgba(74, 153, 211, 0.3), 0px 10px 60px -20px rgba(74, 153, 211, 0.3);
+  box-shadow: -10px 0px 60px -20px rgba(74, 153, 211, 0.2), 10px 0px 60px -20px rgba(74, 153, 211, 0.2), 0px 10px 60px -20px rgba(74, 153, 211, 0.2);
+}
+body .main .whatWeDo__wrap__form--receive h2 {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+}
+body .main .whatWeDo__wrap__form--receive p {
+  position: absolute;
+  top: 60%;
+  left: 10%;
+  max-width: 70%;
+}
+body .main .whatWeDo__wrap__form--receive a {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
 }
 body .main .whatWeDo__wrap__form--buy {
   position: absolute;
   bottom: 0;
   right: 0;
-  box-shadow: -10px 0px 60px -20px rgba(74, 153, 211, 0.3), 10px 0px 60px -20px rgba(74, 153, 211, 0.3), 0px 10px 60px -20px rgba(74, 153, 211, 0.3);
+  box-shadow: -10px 0px 60px -20px rgba(74, 153, 211, 0.2), 10px 0px 60px -20px rgba(74, 153, 211, 0.2), 0px 10px 60px -20px rgba(74, 153, 211, 0.2);
+}
+body .main .whatWeDo__wrap__form--buy h2 {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+}
+body .main .whatWeDo__wrap__form--buy p {
+  position: absolute;
+  top: 60%;
+  left: 10%;
+  max-width: 70%;
+}
+body .main .whatWeDo__wrap__form--buy a {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
 }
 body .main .whatWeDo__construct {
   position: absolute;
