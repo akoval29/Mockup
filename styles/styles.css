@@ -257,7 +257,7 @@ body .main .whatTheySay__container-1__wrap {
   bottom: 0;
   left: 0;
   height: 400px;
-  width: 600px;
+  width: 595px;
 }
 body .main .whatTheySay__container-1 img {
   position: absolute;
@@ -283,6 +283,7 @@ body .main .whatTheySay__container-2 #arrow {
   position: absolute;
   bottom: 0;
   right: 0;
+  border: 1px solid #4a99d3;
 }
 body .main .whatTheySay__container-2 p,
 body .main .whatTheySay__container-2 h1 {
@@ -363,14 +364,51 @@ body .main .enjoy__container-2__wrap__btn-2 {
   max-height: 60px;
   margin-right: 10px;
 }
-body .main footer {
+body .main .footer {
   grid-area: footer;
   font-size: 26px;
   color: #fff;
   background-color: #4a99d3;
   z-index: 1;
   bottom: 0;
+  display: grid;
+  grid-template-rows: 1fr 52px;
+  grid-template-areas: "upper" "lower";
+}
+body .main .footer__container-1 {
+  grid-area: upper;
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+}
+body .main .footer__container-1 > * {
+  margin: 3% 3% 1% 4%;
+}
+body .main .footer__container-1 > * h1 {
+  font-size: 19px;
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+body .main .footer__container-1 > * p {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+body .main .footer__container-1 input {
+  width: 220px;
+  height: 40px;
+}
+body .main .footer__container-1 button {
+  background-color: #fff;
+  color: #4a99d3;
+  font-size: 17px;
+  font-weight: bold;
+  width: 100px;
+  height: 40px;
+}
+body .main .footer__container-2 {
+  grid-area: lower;
+  display: flex;
+  justify-content: space-around;
   align-items: center;
+  border-top: 1px solid #fff;
+  font-size: 11px;
 }/*# sourceMappingURL=styles.css.map */
