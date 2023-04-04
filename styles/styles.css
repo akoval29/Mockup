@@ -86,6 +86,41 @@ body .main .whatWeDo {
   display: flex;
   box-shadow: inset 0px 7px 30px -30px rgba(0, 0, 0, 0.75);
   position: relative;
+  justify-content: center;
+  align-items: center;
+}
+body .main .whatWeDo__wrap {
+  position: relative;
+  border: 2px dotted rgb(9, 255, 0);
+  height: 1200px;
+  width: 900px;
+  z-index: 1;
+}
+body .main .whatWeDo__wrap h1 {
+  position: absolute;
+  font-size: 36px;
+  width: 395px;
+  height: 138px;
+  top: 5%;
+  left: 7%;
+}
+body .main .whatWeDo__wrap__form {
+  position: absolute;
+  top: 0;
+  right: 0;
+  box-shadow: -10px 0px 60px -20px rgba(74, 153, 211, 0.3), 10px 0px 60px -20px rgba(74, 153, 211, 0.3), 0px 10px 60px -20px rgba(74, 153, 211, 0.3);
+}
+body .main .whatWeDo__wrap__form--receive {
+  position: absolute;
+  top: 30%;
+  left: 0;
+  box-shadow: -10px 0px 60px -20px rgba(74, 153, 211, 0.3), 10px 0px 60px -20px rgba(74, 153, 211, 0.3), 0px 10px 60px -20px rgba(74, 153, 211, 0.3);
+}
+body .main .whatWeDo__wrap__form--buy {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  box-shadow: -10px 0px 60px -20px rgba(74, 153, 211, 0.3), 10px 0px 60px -20px rgba(74, 153, 211, 0.3), 0px 10px 60px -20px rgba(74, 153, 211, 0.3);
 }
 body .main .whatWeDo__construct {
   position: absolute;
