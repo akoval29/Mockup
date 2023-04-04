@@ -14,7 +14,7 @@ body {
   .main {
     display: grid;
     max-width: 1440px;
-    grid-template-rows: 768px 1536px 476px 768px 1536px 350px;
+    grid-template-rows: 768px 1536px 476px 768px 768px 350px;
     background-color: #fff;
     border: 3px dotted red;
     grid-template-areas:
@@ -249,6 +249,68 @@ body {
     .whatTheySay {
       grid-area: whatTheySay;
       display: flex;
+      position: relative;
+      flex-wrap: wrap;
+      > img {
+        position: absolute;
+        right: 0;
+        top: 50%;
+      }
+      h1 {
+        font-size: 27px;
+        text-align: center;
+        width: 100%;
+        height: 50px;
+        line-height: 200px;
+      }
+      &__container-1 {
+        height: 519px;
+        width: 600px;
+        position: relative;
+        border: 2px dotted rgb(9, 255, 0);
+        margin-right: 60px;
+        &__wrap {
+          position: absolute;
+          background-color: $main-light;
+          bottom: 0;
+          left: 0;
+          height: 400px;
+          width: 600px;
+        }
+        img {
+          position: absolute;
+          height: 519px;
+          width: 399px;
+          top: 0;
+          left: 0;
+        }
+      }
+      &__container-2 {
+        position: relative;
+        height: 519px;
+        width: 450px;
+        border: 2px dotted rgb(0, 17, 255);
+
+        display: flex;
+
+        flex-wrap: wrap;
+
+        #bracer {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+        #arrow {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+        }
+        p,
+        h1 {
+          display: flex;
+          align-items: center;
+        }
+      }
     }
     .enjoy {
       grid-area: enjoy;
