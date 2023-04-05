@@ -105,7 +105,7 @@ body .main .whatWeDo {
   justify-content: center;
   align-items: center;
 }
-body .main .whatWeDo__construct {
+body .main .whatWeDo__construct--brown {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -200,10 +200,8 @@ body .main .howItWorks__container {
   font-family: Roboto;
 }
 body .main .howItWorks__container > * {
-  justify-content: center;
   text-align: center;
   width: 20%;
-  margin-bottom: 10px;
 }
 body .main .howItWorks__container > * > * {
   margin-bottom: 10px;
@@ -370,6 +368,10 @@ body .main .footer__container-1 {
   display: flex;
   flex-direction: row;
 }
+body .main .footer__container-1 h1:hover,
+body .main .footer__container-1 p:hover {
+  cursor: pointer;
+}
 body .main .footer__container-1__logo {
   width: 15%;
   font-family: "Product Sans", sans-serif;
@@ -385,7 +387,8 @@ body .main .footer__container-1 > * h1 {
   margin-bottom: 20px;
   text-decoration: underline;
 }
-body .main .footer__container-1 > * p {
+body .main .footer__container-1 > * p,
+body .main .footer__container-1 > * h6 {
   font-size: 15px;
   margin-bottom: 10px;
 }
@@ -401,6 +404,10 @@ body .main .footer__container-1 button {
   width: 100px;
   height: 40px;
 }
+body .main .footer__container-1 button:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
 body .main .footer__container-2 {
   grid-area: lower;
   display: flex;
@@ -408,4 +415,7 @@ body .main .footer__container-2 {
   align-items: center;
   border-top: 1px solid #fff;
   font-size: 11px;
+}
+body .main .footer__container-2 img:hover {
+  cursor: pointer;
 }/*# sourceMappingURL=styles.css.map */
