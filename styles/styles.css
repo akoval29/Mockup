@@ -12,9 +12,8 @@ body {
 body .main {
   display: grid;
   max-width: 1440px;
-  grid-template-rows: 768px 1536px 476px 768px 768px 350px;
+  grid-template-rows: 768px 1536px 476px 768px 640px 350px;
   background-color: #fff;
-  border: 3px dotted red;
   grid-template-areas: "eCom" "whatWeDo" "howItWorks" "whatTheySay" "enjoy" "footer";
 }
 body .main .eCom {
@@ -135,7 +134,6 @@ body .main .whatWeDo__dottedShit--bottom {
 }
 body .main .whatWeDo__wrap {
   position: relative;
-  border: 2px dotted rgb(9, 255, 0);
   height: 1200px;
   width: 900px;
   z-index: 1;
@@ -232,7 +230,6 @@ body .main .whatTheySay__container-1 {
   height: 519px;
   width: 650px;
   position: relative;
-  border: 2px dotted rgb(9, 255, 0);
   margin-right: 60px;
 }
 body .main .whatTheySay__container-1__wrap {
@@ -254,7 +251,6 @@ body .main .whatTheySay__container-2 {
   position: relative;
   height: 519px;
   width: 500px;
-  border: 2px dotted rgb(0, 17, 255);
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -273,7 +269,6 @@ body .main .whatTheySay__container-2 #arrow {
 body .main .whatTheySay__container-2__wrap {
   display: flex;
   flex-wrap: wrap;
-  border: 2px dotted rgb(0, 255, 21);
   width: 100%;
   height: 200px;
 }
@@ -297,7 +292,6 @@ body .main .enjoy__container-1 {
   position: relative;
   height: 535px;
   width: 650px;
-  border: 2px dotted rgb(0, 17, 255);
   margin-right: 60px;
 }
 body .main .enjoy__container-1__mobile-1 {
@@ -327,7 +321,6 @@ body .main .enjoy__container-2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px dotted rgb(226, 174, 61);
 }
 body .main .enjoy__container-2__wrap {
   display: flex;
@@ -381,6 +374,8 @@ body .main .footer__container-1__logo {
   width: 15%;
   font-family: "Product Sans", sans-serif;
   text-align: center;
+  font-size: 40px;
+  font-weight: bold;
 }
 body .main .footer__container-1 > * {
   margin: 3% 2% 1% 3%;
