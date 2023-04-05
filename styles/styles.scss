@@ -8,11 +8,6 @@ $fz: 26px;
 $main-color: #4a99d3;
 $main-light: lighten($main-color, 35%);
 
-html {
-  // smooth scroll
-  scroll-behavior: smooth;
-}
-
 body {
   display: flex;
   justify-content: center;
