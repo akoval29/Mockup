@@ -18,3 +18,20 @@ for (let i = 0; i < divs.length; i++) {
     });
   });
 }
+
+// Back TO TOP button
+const scrollToTopBtn = document.querySelector(".scrollToTopBtn");
+window.addEventListener("scroll", () => {
+  if (window.pageYOffset > 100) {
+    scrollToTopBtn.classList.add("active");
+  } else {
+    scrollToTopBtn.classList.remove("active");
+  }
+});
+
+scrollToTopBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});

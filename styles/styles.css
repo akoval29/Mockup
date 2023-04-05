@@ -16,6 +16,22 @@ body .main {
   background-color: #fff;
   grid-template-areas: "eCom" "whatWeDo" "howItWorks" "whatTheySay" "enjoy" "footer";
 }
+body .main .scrollToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 35px;
+  color: #333;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+body .main .scrollToTopBtn.active {
+  opacity: 1;
+}
 body .main .eCom {
   grid-area: eCom;
   display: flex;
