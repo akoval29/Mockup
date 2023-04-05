@@ -3,6 +3,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Google+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Product+Sans&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -38,14 +42,18 @@ body .main .eCom__header h4 {
   font-weight: bold;
   font-family: "Product Sans", sans-serif;
 }
-body .main .eCom__header nav {
+body .main .eCom__header__nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 20%;
   font-size: 20px;
 }
-body .main .eCom__header nav > *:hover {
+body .main .eCom__header__nav a {
+  text-decoration: none;
+  color: black;
+}
+body .main .eCom__header__nav a:hover {
   cursor: pointer;
   color: #4a99d3;
 }
@@ -253,12 +261,12 @@ body .main .whatTheySay__container-2 {
   align-items: center;
   flex-wrap: wrap;
 }
-body .main .whatTheySay__container-2 #bracer {
+body .main .whatTheySay__container-2__bracer {
   position: absolute;
   top: 15%;
   left: 0;
 }
-body .main .whatTheySay__container-2 #arrow {
+body .main .whatTheySay__container-2__arrow {
   position: absolute;
   bottom: 0;
   right: 0;

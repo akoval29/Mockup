@@ -8,6 +8,11 @@ $fz: 26px;
 $main-color: #4a99d3;
 $main-light: lighten($main-color, 35%);
 
+html {
+  // smooth scroll
+  scroll-behavior: smooth;
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -48,15 +53,19 @@ body {
           font-weight: bold;
           font-family: "Product Sans", sans-serif;
         }
-        nav {
+        &__nav {
           display: flex;
           flex-direction: row;
           justify-content: space-between;
           width: 20%;
           font-size: 20px;
-          > *:hover {
-            cursor: pointer;
-            color: $main-color;
+          a {
+            text-decoration: none;
+            color: black;
+            &:hover {
+              cursor: pointer;
+              color: $main-color;
+            }
           }
         }
       }
@@ -277,12 +286,12 @@ body {
         display: flex;
         align-items: center;
         flex-wrap: wrap;
-        #bracer {
+        &__bracer {
           position: absolute;
           top: 15%;
           left: 0;
         }
-        #arrow {
+        &__arrow {
           position: absolute;
           bottom: 0;
           right: 0;

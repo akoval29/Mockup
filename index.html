@@ -8,14 +8,10 @@
   </head>
   <body>
     <article class="main">
-      <section class="eCom">
+      <section class="eCom" id="Home">
         <header class="eCom__header">
           <h4>LOGO</h4>
-          <nav>
-            <p>Home</p>
-            <p>About</p>
-            <p>Contact us</p>
-          </nav>
+          <nav class="eCom__header__nav"></nav>
         </header>
         <article class="eCom__container">
           <div class="eCom__container__content">
@@ -115,7 +111,7 @@
         />
       </section>
 
-      <section class="howItWorks">
+      <section class="howItWorks" id="About">
         <h1>How it works</h1>
         <section class="howItWorks__container">
           <div class="howItWorks__container__create">
@@ -145,12 +141,12 @@
         </div>
         <div class="whatTheySay__container-2">
           <img
-            id="bracer"
+            class="whatTheySay__container-2__bracer"
             src="src/Screenshot_8.png"
             alt="whatTheySay__brasers_img"
           />
           <img
-            id="arrow"
+            class="whatTheySay__container-2__arrow"
             src="src/Screenshot_16.png"
             alt="whatTheySay__arrows_img"
           />
@@ -216,7 +212,7 @@
           </div>
         </div>
       </section>
-      <footer class="footer">
+      <footer class="footer" id="Contact Us">
         <section class="footer__container-1">
           <h2 class="footer__container-1__logo">LOGO</h2>
           <div class="footer__container-1__quickLinks__container">
@@ -247,7 +243,6 @@
               <input
                 class="email-container__input"
                 type="text"
-                id="email"
                 name="email"
                 placeholder="example@gmail.com"
                 required
@@ -267,5 +262,6 @@
       </footer>
     </article>
     <!-- main -->
+    <script src="js/script.js"></script>
   </body>
 </html>
