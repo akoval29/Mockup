@@ -1,5 +1,8 @@
 @import url("normalize.css");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Product+Sans&display=swap");
 
 $h: 50px;
 $fz: 26px;
@@ -10,12 +13,14 @@ body {
   display: flex;
   justify-content: center;
   margin: 30px;
+  font-family: "Roboto", sans-serif;
 
   .main {
     display: grid;
     max-width: 1440px;
     grid-template-rows: 768px 1536px 476px 768px 768px 350px;
     background-color: #fff;
+
     border: 3px dotted red;
     grid-template-areas:
       "eCom"
@@ -36,9 +41,13 @@ body {
         justify-content: space-around;
         align-items: center;
         width: 100%;
+        font-family: "Poppins", sans-serif;
+        font-weight: bold;
         h4 {
           color: $main-color;
           font-size: 40px;
+          font-weight: bold;
+          font-family: "Product Sans", sans-serif;
         }
         nav {
           display: flex;
@@ -46,6 +55,10 @@ body {
           justify-content: space-between;
           width: 20%;
           font-size: 20px;
+          > *:hover {
+            cursor: pointer;
+            color: $main-color;
+          }
         }
       }
       &__container {
@@ -72,24 +85,29 @@ body {
               max-width: 180px;
               max-height: 60px;
               margin-right: 10px;
+              border-radius: 10px;
+              &:hover {
+                cursor: pointer;
+                transform: scale(1.05);
+              }
             }
           }
         }
         &__images {
-          .mobile {
+          .mobile--small {
             position: absolute;
             max-height: 460px;
             max-width: 240px;
             bottom: 0;
             right: 200px;
             z-index: 1;
-            &--large {
-              position: absolute;
-              max-height: 535px;
-              max-width: 280px;
-              bottom: 0;
-              right: 0;
-            }
+          }
+          .mobile--large {
+            position: absolute;
+            max-height: 535px;
+            max-width: 280px;
+            bottom: 0;
+            right: 0;
           }
         }
       }
@@ -101,6 +119,35 @@ body {
       position: relative;
       justify-content: center;
       align-items: center;
+      &__construct {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        &--blue {
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+      }
+      &__dottedShit--top,
+      &__dottedShit--mid,
+      &__dottedShit--bottom {
+        position: absolute;
+        max-width: 200px;
+        max-height: 200px;
+      }
+      &__dottedShit--top {
+        top: 5.2%;
+        right: 10%;
+      }
+      &__dottedShit--mid {
+        top: 50%;
+        left: 16%;
+      }
+      &__dottedShit--bottom {
+        bottom: 5%;
+        right: 10%;
+      }
       &__wrap {
         position: relative;
         border: 2px dotted rgb(9, 255, 0);
@@ -115,10 +162,10 @@ body {
           top: 7%;
           left: 5%;
         }
-        &__form {
+        &__form--send,
+        &__form--receive,
+        &__form--buy {
           position: absolute;
-          top: 0;
-          right: 0;
           box-shadow: -10px 0px 60px -20px rgba(74, 153, 211, 0.2),
             10px 0px 60px -20px rgba(74, 153, 211, 0.2),
             0px 10px 60px -20px rgba(74, 153, 211, 0.2);
@@ -138,86 +185,18 @@ body {
             bottom: 10%;
             left: 10%;
           }
-          &--receive {
-            position: absolute;
-            top: 30%;
-            left: 10%;
-            box-shadow: -10px 0px 60px -20px rgba(74, 153, 211, 0.2),
-              10px 0px 60px -20px rgba(74, 153, 211, 0.2),
-              0px 10px 60px -20px rgba(74, 153, 211, 0.2);
-            h2 {
-              position: absolute;
-              top: 50%;
-              left: 10%;
-            }
-            p {
-              position: absolute;
-              top: 60%;
-              left: 10%;
-              max-width: 70%;
-            }
-            a {
-              position: absolute;
-              bottom: 10%;
-              left: 10%;
-            }
-          }
-          &--buy {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            box-shadow: -10px 0px 60px -20px rgba(74, 153, 211, 0.2),
-              10px 0px 60px -20px rgba(74, 153, 211, 0.2),
-              0px 10px 60px -20px rgba(74, 153, 211, 0.2);
-            h2 {
-              position: absolute;
-              top: 50%;
-              left: 10%;
-            }
-            p {
-              position: absolute;
-              top: 60%;
-              left: 10%;
-              max-width: 70%;
-            }
-            a {
-              position: absolute;
-              bottom: 10%;
-              left: 10%;
-            }
-          }
         }
-      }
-
-      &__construct {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        &--blue {
-          position: absolute;
+        &__form--send {
           top: 0;
           right: 0;
         }
-      }
-      &__dottedShit {
-        position: absolute;
-        max-width: 200px;
-        max-height: 200px;
-        top: 5.2%;
-        right: 10%;
-        &--mid {
-          position: absolute;
-          max-width: 200px;
-          max-height: 200px;
-          top: 50%;
-          left: 20%;
+        &__form--receive {
+          top: 30%;
+          left: 10%;
         }
-        &--bottom {
-          position: absolute;
-          max-width: 200px;
-          max-height: 200px;
-          bottom: 5%;
-          right: 10%;
+        &__form--buy {
+          bottom: 0;
+          right: 0;
         }
       }
     }
@@ -239,10 +218,15 @@ body {
         justify-content: space-around;
         align-items: center;
         margin: 0 10% 0 10%;
+        font-family: Roboto;
         > * {
           justify-content: center;
           text-align: center;
           width: 20%;
+          margin-bottom: 10px;
+          > * {
+            margin-bottom: 10px;
+          }
         }
       }
     }
@@ -256,7 +240,7 @@ body {
         right: 0;
         top: 50%;
       }
-      h1 {
+      > h1 {
         font-size: 27px;
         text-align: center;
         width: 100%;
@@ -265,7 +249,7 @@ body {
       }
       &__container-1 {
         height: 519px;
-        width: 600px;
+        width: 650px;
         position: relative;
         border: 2px dotted rgb(9, 255, 0);
         margin-right: 60px;
@@ -275,7 +259,7 @@ body {
           bottom: 0;
           left: 0;
           height: 400px;
-          width: 595px;
+          width: 648px;
         }
         img {
           position: absolute;
@@ -288,15 +272,14 @@ body {
       &__container-2 {
         position: relative;
         height: 519px;
-        width: 450px;
+        width: 500px;
         border: 2px dotted rgb(0, 17, 255);
-
         display: flex;
+        align-items: center;
         flex-wrap: wrap;
-
         #bracer {
           position: absolute;
-          top: 0;
+          top: 15%;
           left: 0;
         }
         #arrow {
@@ -305,10 +288,12 @@ body {
           right: 0;
           border: 1px solid $main-color;
         }
-        p,
-        h1 {
+        &__wrap {
           display: flex;
-          align-items: center;
+          flex-wrap: wrap;
+          border: 2px dotted rgb(0, 255, 21);
+          width: 100%;
+          height: 200px;
         }
       }
     }
@@ -327,47 +312,49 @@ body {
         bottom: -6%;
         right: 0;
       }
-
       &__container-1 {
         position: relative;
         height: 535px;
-        width: 600px;
+        width: 650px;
         border: 2px dotted rgb(0, 17, 255);
         margin-right: 60px;
         &__mobile-1 {
           position: absolute;
-          max-height: 535px;
-          max-width: 280px;
-          bottom: 0;
-          right: 30%;
+          max-height: 450px;
+          max-width: 230px;
+          top: 9%;
+          right: 20%;
           z-index: 1;
         }
-        &__mobile-2 {
+        &__mobile-2,
+        &__mobile-3 {
           position: absolute;
-          max-height: 460px;
-          max-width: 240px;
-          top: 7%;
+          max-height: 360px;
+          max-width: 200px;
+          top: 17%;
+        }
+        &__mobile-2 {
           right: 0;
         }
         &__mobile-3 {
-          position: absolute;
-          max-height: 460px;
-          max-width: 240px;
-          top: 7%;
-          left: 0;
+          left: 25%;
         }
       }
 
       &__container-2 {
         position: relative;
         height: 535px;
-        width: 400px;
+        width: 500px;
         display: flex;
         align-items: center;
+        justify-content: center;
         border: 2px dotted rgb(226, 174, 61);
         &__wrap {
           display: flex;
+          align-items: center;
+          justify-content: center;
           flex-wrap: wrap;
+          width: 80%;
           > * {
             margin-bottom: 20px;
             text-align: center;
@@ -379,11 +366,19 @@ body {
             max-width: 180px;
             max-height: 60px;
             margin-right: 10px;
+            &:hover {
+              cursor: pointer;
+              transform: scale(1.05);
+            }
           }
           &__btn-2 {
             max-width: 180px;
             max-height: 60px;
             margin-right: 10px;
+            &:hover {
+              cursor: pointer;
+              transform: scale(1.05);
+            }
           }
         }
       }
@@ -394,12 +389,12 @@ body {
 
       font-size: $fz;
       color: #fff;
-      background-color: #4a99d3;
+      background-color: $main-color;
       z-index: 1;
       bottom: 0;
 
       display: grid;
-      grid-template-rows: 1fr 52px;
+      grid-template-rows: 1fr 54px;
       grid-template-areas:
         "upper"
         "lower";
@@ -408,8 +403,14 @@ body {
         grid-area: upper;
         display: flex;
         flex-direction: row;
+        &__logo {
+          width: 15%;
+          font-family: "Product Sans", sans-serif;
+          text-align: center;
+        }
+
         > * {
-          margin: 3% 3% 1% 4%;
+          margin: 3% 2% 1% 3%;
           h1 {
             font-size: 19px;
             margin-bottom: 20px;
