@@ -6,7 +6,7 @@ const navEl = document.querySelector(".eCom__header__nav");
 
 for (let i = 0; i < divs.length; i++) {
   const id = divs[i].getAttribute("id");
-  const a = document.createElement("h3");
+  const a = document.createElement("a");
   a.setAttribute("href", `#${id}`);
   a.textContent = `${id}`;
   navEl.appendChild(a);
@@ -20,7 +20,7 @@ for (let i = 0; i < divs.length; i++) {
 }
 
 // Back TO TOP button
-const scrollToTopBtn = document.querySelector(".scrollToTopBtn");
+const scrollToTopBtn = document.querySelector(".main__scrollToTopBtn");
 window.addEventListener("scroll", () => {
   if (window.pageYOffset > 100) {
     scrollToTopBtn.classList.add("active");
