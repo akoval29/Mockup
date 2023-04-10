@@ -47,9 +47,11 @@ body {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      // min-height: 100vh;
+      min-height: 100vh;
       background: linear-gradient(to bottom, $main-light, white);
       &__header {
+        top: 0;
+        position: absolute;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
@@ -140,8 +142,13 @@ body {
           }
         }
       }
+    }
 
-      @media (max-width: 942px) {
+    @media (max-width: 1000px) {
+      .eCom {
+        &__header {
+          position: relative;
+        }
         &__container {
           margin-bottom: 0;
           &__content {
@@ -365,14 +372,18 @@ body {
         &__wrap {
           display: flex;
           flex-wrap: wrap;
+          align-items: flex-end;
           width: 100%;
-          min-height: 200px;
+          min-height: 150px;
         }
       }
     }
     @media (max-width: 1362px) {
       .whatTheySay {
         padding: 0;
+        &__container-2 {
+          min-height: 300px;
+        }
       }
     }
     .enjoy {
@@ -460,8 +471,12 @@ body {
     @media (max-width: 1362px) {
       .enjoy {
         padding: 0;
+        &__container-2 {
+          min-height: 300px;
+        }
       }
     }
+
     .footer {
       grid-area: footer;
       display: grid;
@@ -469,7 +484,7 @@ body {
       color: #fff;
       background-color: $main-color;
       z-index: 1;
-      bottom: 0;
+
       grid-template-areas:
         "upper"
         "lower";
