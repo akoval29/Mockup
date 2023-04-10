@@ -31,13 +31,25 @@ body {
       border: none;
       padding: 20px;
       border-radius: 50%;
-      background-color: $main-light;
+
+      background-image: radial-gradient(
+        circle at center,
+        $main-light 0%,
+        $main-color 100%
+      );
       cursor: pointer;
       opacity: 0;
-      transition: opacity 0.3s ease-in-out;
+      transition: opacity 0.3s ease-in-out, transform 0.5s ease;
       z-index: 50;
       &.active {
+        // клас активності відпрацьовує в js
         opacity: 1;
+      }
+      &:hover {
+        transform: scale(1.2);
+      }
+      &:active {
+        color: $main-light;
       }
     }
 

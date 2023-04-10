@@ -21,14 +21,20 @@ body .main__scrollToTopBtn {
   border: none;
   padding: 20px;
   border-radius: 50%;
-  background-color: #daeaf6;
+  background-image: radial-gradient(circle at center, #daeaf6 0%, #4a99d3 100%);
   cursor: pointer;
   opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, transform 0.5s ease;
   z-index: 50;
 }
 body .main__scrollToTopBtn.active {
   opacity: 1;
+}
+body .main__scrollToTopBtn:hover {
+  transform: scale(1.2);
+}
+body .main__scrollToTopBtn:active {
+  color: #daeaf6;
 }
 body .main .eCom {
   grid-area: eCom;
