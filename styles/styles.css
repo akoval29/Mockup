@@ -65,7 +65,6 @@ body .main .eCom__header__nav a:hover {
   color: #4a99d3;
 }
 body .main .eCom__container {
-  border: dashed 2px #dc05f0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -73,8 +72,8 @@ body .main .eCom__container {
   margin-bottom: 100px;
 }
 body .main .eCom__container__content {
-  border: dashed 2px #19f005;
   padding-right: 40px;
+  margin: 30px 0;
   max-width: 600px;
 }
 body .main .eCom__container__content h1 {
@@ -94,9 +93,8 @@ body .main .eCom__container__content__btn:hover {
   transform: scale(1.05);
 }
 body .main .eCom__container__images {
-  border: dashed 2px #f0d805;
   display: flex;
-  max-width: 400px;
+  max-width: 350px;
   align-items: end;
   position: relative;
   height: 535px;
@@ -106,20 +104,20 @@ body .main .eCom__container__images__mobile--small {
   position: absolute;
   left: 0;
   bottom: 0;
-  max-height: 460px;
-  max-width: 240px;
-  height: 100%;
+  width: 100%;
+  max-width: 220px;
+  height: auto;
   z-index: 1;
 }
 body .main .eCom__container__images__mobile--large {
   position: absolute;
   top: 0;
   right: 0;
-  height: 100%;
-  max-width: 280px;
+  width: 100%;
+  max-width: 255px;
+  height: auto;
 }
 body .main .whatWeDo {
-  border: dashed 2px #f00505;
   grid-area: whatWeDo;
   display: flex;
   box-shadow: inset 0px 7px 30px -30px rgba(0, 0, 0, 0.75);
@@ -163,7 +161,6 @@ body .main .whatWeDo__dottedShit--bottom {
   right: 10%;
 }
 body .main .whatWeDo__wrap {
-  border: dashed 2px #05f019;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
