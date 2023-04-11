@@ -33,93 +33,95 @@ $main-light: lighten($main-color, 35%);
     width: 100%;
     font-family: "Poppins", sans-serif;
     font-weight: bold;
-    &__logo {
-      color: $main-color;
-      font-weight: bold;
-      font-family: "Product Sans", sans-serif;
-    }
-    &__nav {
-      &__item {
-        text-decoration: none;
-        color: black;
-        margin-right: 20px;
-        font-size: 2rem;
-        font-weight: bold;
-        &:hover {
-          cursor: pointer;
-          color: $main-color;
-        }
-      }
-    }
+  }
 
-    @media (max-width: 700px) {
-      &__logo {
-        display: none;
-      }
+  &__logo {
+    color: $main-color;
+    font-weight: bold;
+    font-family: "Product Sans", sans-serif;
+  }
+  @media (max-width: 700px) {
+    &__logo {
+      display: none;
     }
   }
 
+  &__nav-item {
+    text-decoration: none;
+    color: black;
+    margin-right: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    &:hover {
+      cursor: pointer;
+      color: $main-color;
+    }
+  }
   &__container {
-    border: dashed 2px #dc05f0;
+    // border: dashed 2px #dc05f0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
     margin-bottom: 100px;
-    &__content {
-      border: dashed 2px #19f005;
-      flex: 1 1 auto;
-      padding: 0px 80px;
+  }
+
+  &__container-content {
+    // border: dashed 2px #19f005;
+    flex: 1 1 auto;
+    padding: 0px 80px;
+    h1 {
+      margin-bottom: 20px;
+    }
+    h4 {
+      margin-bottom: 50px;
+    }
+  }
+
+  @media (max-width: 900px) {
+    &__container-content {
+      padding: 0px 20px;
       h1 {
-        margin-bottom: 20px;
+        font-size: 35px;
       }
       h4 {
-        margin-bottom: 50px;
+        font-size: 18px;
       }
       &__btn {
-        max-width: 180px;
-        min-height: 60px;
-        margin-right: 10px;
-        border-radius: 10px;
-        &:hover {
-          cursor: pointer;
-          transform: scale(1.05);
-        }
-      }
-    }
-
-    @media (max-width: 900px) {
-      &__content {
-        padding: 0px 20px;
-        h1 {
-          font-size: 35px;
-        }
-        h4 {
-          font-size: 18px;
-        }
-        &__btn {
-          max-width: 150px;
-          min-height: 50px;
-        }
-      }
-    }
-
-    &__images {
-      border: dashed 2px #f0d805;
-      flex: 0 0 33.333%;
-      &__mobile {
-        max-width: 100%;
-        max-height: 100%;
-        object-fit: cover;
+        max-width: 150px;
+        min-height: 50px;
       }
     }
   }
+
+  &__btn {
+    max-width: 180px;
+    min-height: 60px;
+    margin-right: 10px;
+    border-radius: 10px;
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.05);
+    }
+  }
+
+  &__images {
+    // border: dashed 2px #f0d805;
+    flex: 0 0 33.333%;
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+    }
+  }
+
   @media (max-width: 700px) {
     &__container {
       flex-wrap: wrap;
-      &__images {
-        flex: none;
-      }
+    }
+    &__images {
+      flex: none;
+      padding: 10px;
     }
   }
 }

@@ -31,76 +31,73 @@
   font-family: "Poppins", sans-serif;
   font-weight: bold;
 }
-.eCom__header__logo {
+.eCom__logo {
   color: #4a99d3;
   font-weight: bold;
   font-family: "Product Sans", sans-serif;
 }
-.eCom__header__nav__item {
+@media (max-width: 700px) {
+  .eCom__logo {
+    display: none;
+  }
+}
+.eCom__nav-item {
   text-decoration: none;
   color: black;
   margin-right: 20px;
   font-size: 2rem;
   font-weight: bold;
 }
-.eCom__header__nav__item:hover {
+.eCom__nav-item:hover {
   cursor: pointer;
   color: #4a99d3;
 }
-@media (max-width: 700px) {
-  .eCom__header__logo {
-    display: none;
-  }
-}
 .eCom__container {
-  border: dashed 2px #dc05f0;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
   margin-bottom: 100px;
 }
-.eCom__container__content {
-  border: dashed 2px #19f005;
+.eCom__container-content {
   flex: 1 1 auto;
   padding: 0px 80px;
 }
-.eCom__container__content h1 {
+.eCom__container-content h1 {
   margin-bottom: 20px;
 }
-.eCom__container__content h4 {
+.eCom__container-content h4 {
   margin-bottom: 50px;
 }
-.eCom__container__content__btn {
+@media (max-width: 900px) {
+  .eCom__container-content {
+    padding: 0px 20px;
+  }
+  .eCom__container-content h1 {
+    font-size: 35px;
+  }
+  .eCom__container-content h4 {
+    font-size: 18px;
+  }
+  .eCom__container-content__btn {
+    max-width: 150px;
+    min-height: 50px;
+  }
+}
+.eCom__btn {
   max-width: 180px;
   min-height: 60px;
   margin-right: 10px;
   border-radius: 10px;
 }
-.eCom__container__content__btn:hover {
+.eCom__btn:hover {
   cursor: pointer;
   transform: scale(1.05);
 }
-@media (max-width: 900px) {
-  .eCom__container__content {
-    padding: 0px 20px;
-  }
-  .eCom__container__content h1 {
-    font-size: 35px;
-  }
-  .eCom__container__content h4 {
-    font-size: 18px;
-  }
-  .eCom__container__content__btn {
-    max-width: 150px;
-    min-height: 50px;
-  }
-}
-.eCom__container__images {
-  border: dashed 2px #f0d805;
+.eCom__images {
   flex: 0 0 33.333%;
 }
-.eCom__container__images__mobile {
+.eCom__images img {
   max-width: 100%;
   max-height: 100%;
   -o-object-fit: cover;
@@ -110,7 +107,8 @@
   .eCom__container {
     flex-wrap: wrap;
   }
-  .eCom__container__images {
+  .eCom__images {
     flex: none;
+    padding: 10px;
   }
 }/*# sourceMappingURL=styles.css.map */
