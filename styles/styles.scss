@@ -48,7 +48,7 @@ $main-light: lighten($main-color, 35%);
 
   &__nav-item {
     text-decoration: none;
-    color: black;
+    // color: black;
     margin-right: 20px;
     font-size: 2rem;
     font-weight: bold;
@@ -57,6 +57,7 @@ $main-light: lighten($main-color, 35%);
       color: $main-color;
     }
   }
+
   &__container {
     // border: dashed 2px #dc05f0;
     display: flex;
@@ -68,6 +69,7 @@ $main-light: lighten($main-color, 35%);
 
   &__container-content {
     // border: dashed 2px #19f005;
+    max-width: 1000px;
     flex: 1 1 auto;
     padding: 0px 80px;
     h1 {
@@ -75,22 +77,6 @@ $main-light: lighten($main-color, 35%);
     }
     h4 {
       margin-bottom: 50px;
-    }
-  }
-
-  @media (max-width: 900px) {
-    &__container-content {
-      padding: 0px 20px;
-      h1 {
-        font-size: 35px;
-      }
-      h4 {
-        font-size: 18px;
-      }
-    }
-    &__btn {
-      max-width: 150px;
-      min-height: 50px;
     }
   }
 
@@ -105,7 +91,23 @@ $main-light: lighten($main-color, 35%);
     }
   }
 
-  &__images {
+  @media (max-width: 900px) {
+    &__container-content {
+      padding: 0px 30px;
+      h1 {
+        font-size: 35px;
+      }
+      h4 {
+        font-size: 18px;
+      }
+    }
+    &__btn {
+      max-width: 150px;
+      min-height: 50px;
+    }
+  }
+
+  &__container-images {
     // border: dashed 2px #f0d805;
     flex: 0 0 33.333%;
     img {
@@ -114,12 +116,11 @@ $main-light: lighten($main-color, 35%);
       object-fit: cover;
     }
   }
-
   @media (max-width: 700px) {
     &__container {
       flex-wrap: wrap;
     }
-    &__images {
+    &__container-images {
       flex: none;
       padding: 10px;
     }

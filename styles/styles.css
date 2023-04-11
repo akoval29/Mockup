@@ -43,7 +43,6 @@
 }
 .eCom__nav-item {
   text-decoration: none;
-  color: black;
   margin-right: 20px;
   font-size: 2rem;
   font-weight: bold;
@@ -60,6 +59,7 @@
   margin-bottom: 100px;
 }
 .eCom__container-content {
+  max-width: 1000px;
   flex: 1 1 auto;
   padding: 0px 80px;
 }
@@ -69,9 +69,19 @@
 .eCom__container-content h4 {
   margin-bottom: 50px;
 }
+.eCom__btn {
+  max-width: 180px;
+  min-height: 60px;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+.eCom__btn:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
 @media (max-width: 900px) {
   .eCom__container-content {
-    padding: 0px 20px;
+    padding: 0px 30px;
   }
   .eCom__container-content h1 {
     font-size: 35px;
@@ -84,20 +94,10 @@
     min-height: 50px;
   }
 }
-.eCom__btn {
-  max-width: 180px;
-  min-height: 60px;
-  margin-right: 10px;
-  border-radius: 10px;
-}
-.eCom__btn:hover {
-  cursor: pointer;
-  transform: scale(1.05);
-}
-.eCom__images {
+.eCom__container-images {
   flex: 0 0 33.333%;
 }
-.eCom__images img {
+.eCom__container-images img {
   max-width: 100%;
   max-height: 100%;
   -o-object-fit: cover;
@@ -107,7 +107,7 @@
   .eCom__container {
     flex-wrap: wrap;
   }
-  .eCom__images {
+  .eCom__container-images {
     flex: none;
     padding: 10px;
   }
