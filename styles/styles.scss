@@ -87,10 +87,10 @@ $main-light: lighten($main-color, 35%);
       h4 {
         font-size: 18px;
       }
-      &__btn {
-        max-width: 150px;
-        min-height: 50px;
-      }
+    }
+    &__btn {
+      max-width: 150px;
+      min-height: 50px;
     }
   }
 
