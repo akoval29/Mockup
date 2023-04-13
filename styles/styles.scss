@@ -12,7 +12,9 @@ $main-light: lighten($main-color, 35%);
   width: 100%;
   font-family: "Roboto", sans-serif;
   grid-template-rows: repeat(auto-fit, minmax(1vh, auto));
-  grid-template-areas: "eCom";
+  grid-template-areas:
+    "eCom"
+    "whatWeDo";
 }
 
 .eCom {
@@ -21,8 +23,6 @@ $main-light: lighten($main-color, 35%);
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  min-height: 100vh;
-  height: 100%;
   background: linear-gradient(to bottom, $main-light, white);
   &__header {
     display: flex;
@@ -48,10 +48,11 @@ $main-light: lighten($main-color, 35%);
 
   &__nav-item {
     text-decoration: none;
-    // color: black;
     margin-right: 20px;
-    font-size: 2rem;
     font-weight: bold;
+    &--active {
+      color: $main-color;
+    }
     &:hover {
       cursor: pointer;
       color: $main-color;
@@ -61,15 +62,16 @@ $main-light: lighten($main-color, 35%);
   &__container {
     // border: dashed 2px #dc05f0;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
+    width: 100%;
     height: 100%;
-    margin-bottom: 100px;
+    padding-bottom: 100px;
   }
 
   &__container-content {
     // border: dashed 2px #19f005;
-    max-width: 1000px;
     flex: 1 1 auto;
     padding: 0px 80px;
     h1 {
@@ -77,6 +79,21 @@ $main-light: lighten($main-color, 35%);
     }
     h4 {
       margin-bottom: 50px;
+    }
+  }
+
+  &__container-images {
+    // border: dashed 2px #f0d805;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 40%;
+    img {
+      object-fit: cover;
+      max-width: 100%;
+      max-height: 100%;
     }
   }
 
@@ -92,37 +109,131 @@ $main-light: lighten($main-color, 35%);
   }
 
   @media (max-width: 900px) {
+    &__container {
+      flex-wrap: wrap;
+      padding-bottom: 10px;
+    }
+    &__container-images {
+      flex: 0 0 100%;
+      align-items: flex-start;
+      padding: 10px;
+    }
     &__container-content {
-      padding: 0px 30px;
-      h1 {
-        font-size: 35px;
-      }
-      h4 {
-        font-size: 18px;
-      }
+      padding: 0px 20px;
     }
     &__btn {
       max-width: 150px;
       min-height: 50px;
     }
   }
+}
 
-  &__container-images {
-    // border: dashed 2px #f0d805;
-    flex: 0 0 33.333%;
-    img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: cover;
+.whatWeDo {
+  // border: dashed 2px #f00505;
+  grid-area: whatWeDo;
+  display: flex;
+  box-shadow: inset 0px 7px 30px -30px rgba(0, 0, 0, 1);
+  position: relative;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  min-height: 150vh;
+
+  &__subtitle {
+    position: absolute;
+    width: 350px;
+    height: 138px;
+    top: 12%;
+    left: 15%;
+  }
+  &__construct--brown {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  &__construct--blue {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+  }
+  &__dots--top,
+  &__dots--mid,
+  &__dots--bottom {
+    position: absolute;
+    max-width: 200px;
+    max-height: 200px;
+  }
+  &__dots--top {
+    top: 5.2%;
+    right: 10%;
+  }
+  &__dots--mid {
+    top: 50%;
+    left: 16%;
+  }
+  &__dots--bottom {
+    bottom: 5%;
+    right: 10%;
+  }
+
+  &__container {
+    border: dashed 2px #05f019;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    max-width: 1000px;
+    z-index: 10;
+  }
+  @media (max-width: 767px) {
+    &__container {
+      flex-direction: row;
+    }
+    &__items {
+      display: none;
     }
   }
-  @media (max-width: 700px) {
-    &__container {
-      flex-wrap: wrap;
+
+  &__col-1 {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__col-2 {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+    max-width: 380px;
+    max-height: 600px;
+    border-radius: 15px;
+    margin: 20px 0;
+    box-shadow: -10px 0px 60px -20px rgba($main-color, 0.2),
+      10px 0px 60px -20px rgba($main-color, 0.2),
+      0px 10px 60px -20px rgba($main-color, 0.2);
+    img {
+      max-width: 270px;
     }
-    &__container-images {
-      flex: none;
-      padding: 10px;
+    > * {
+      margin: 0 40px 40px 40px;
+      > * {
+        margin-bottom: 30px;
+      }
     }
   }
 }

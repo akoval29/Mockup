@@ -8,7 +8,7 @@
   width: 100%;
   font-family: "Roboto", sans-serif;
   grid-template-rows: repeat(auto-fit, minmax(1vh, auto));
-  grid-template-areas: "eCom";
+  grid-template-areas: "eCom" "whatWeDo";
 }
 
 .eCom {
@@ -17,8 +17,6 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  min-height: 100vh;
-  height: 100%;
   background: linear-gradient(to bottom, #daeaf6, white);
 }
 .eCom__header {
@@ -44,8 +42,10 @@
 .eCom__nav-item {
   text-decoration: none;
   margin-right: 20px;
-  font-size: 2rem;
   font-weight: bold;
+}
+.eCom__nav-item--active {
+  color: #4a99d3;
 }
 .eCom__nav-item:hover {
   cursor: pointer;
@@ -53,13 +53,14 @@
 }
 .eCom__container {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  width: 100%;
   height: 100%;
-  margin-bottom: 100px;
+  padding-bottom: 100px;
 }
 .eCom__container-content {
-  max-width: 1000px;
   flex: 1 1 auto;
   padding: 0px 80px;
 }
@@ -68,6 +69,20 @@
 }
 .eCom__container-content h4 {
   margin-bottom: 50px;
+}
+.eCom__container-images {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 40%;
+}
+.eCom__container-images img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
 }
 .eCom__btn {
   max-width: 180px;
@@ -80,35 +95,120 @@
   transform: scale(1.05);
 }
 @media (max-width: 900px) {
+  .eCom__container {
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+  }
+  .eCom__container-images {
+    flex: 0 0 100%;
+    align-items: flex-start;
+    padding: 10px;
+  }
   .eCom__container-content {
-    padding: 0px 30px;
-  }
-  .eCom__container-content h1 {
-    font-size: 35px;
-  }
-  .eCom__container-content h4 {
-    font-size: 18px;
+    padding: 0px 20px;
   }
   .eCom__btn {
     max-width: 150px;
     min-height: 50px;
   }
 }
-.eCom__container-images {
-  flex: 0 0 33.333%;
+
+.whatWeDo {
+  grid-area: whatWeDo;
+  display: flex;
+  box-shadow: inset 0px 7px 30px -30px rgb(0, 0, 0);
+  position: relative;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  min-height: 150vh;
 }
-.eCom__container-images img {
-  max-width: 100%;
-  max-height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+.whatWeDo__subtitle {
+  position: absolute;
+  width: 350px;
+  height: 138px;
+  top: 12%;
+  left: 15%;
 }
-@media (max-width: 700px) {
-  .eCom__container {
-    flex-wrap: wrap;
+.whatWeDo__construct--brown {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.whatWeDo__construct--blue {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+}
+.whatWeDo__dots--top, .whatWeDo__dots--mid, .whatWeDo__dots--bottom {
+  position: absolute;
+  max-width: 200px;
+  max-height: 200px;
+}
+.whatWeDo__dots--top {
+  top: 5.2%;
+  right: 10%;
+}
+.whatWeDo__dots--mid {
+  top: 50%;
+  left: 16%;
+}
+.whatWeDo__dots--bottom {
+  bottom: 5%;
+  right: 10%;
+}
+.whatWeDo__container {
+  border: dashed 2px #05f019;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  max-width: 1000px;
+  z-index: 10;
+}
+@media (max-width: 767px) {
+  .whatWeDo__container {
+    flex-direction: row;
   }
-  .eCom__container-images {
-    flex: none;
-    padding: 10px;
+  .whatWeDo__items {
+    display: none;
   }
+}
+.whatWeDo__col-1 {
+  display: flex;
+  flex-basis: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.whatWeDo__col-2 {
+  display: flex;
+  flex-basis: 100%;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.whatWeDo__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+  max-width: 380px;
+  max-height: 600px;
+  border-radius: 15px;
+  margin: 20px 0;
+  box-shadow: -10px 0px 60px -20px rgba(74, 153, 211, 0.2), 10px 0px 60px -20px rgba(74, 153, 211, 0.2), 0px 10px 60px -20px rgba(74, 153, 211, 0.2);
+}
+.whatWeDo__form img {
+  max-width: 270px;
+}
+.whatWeDo__form > * {
+  margin: 0 40px 40px 40px;
+}
+.whatWeDo__form > * > * {
+  margin-bottom: 30px;
 }/*# sourceMappingURL=styles.css.map */
