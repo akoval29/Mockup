@@ -189,6 +189,21 @@ $main-light: lighten($main-color, 35%);
     max-width: 1000px;
     z-index: 10;
   }
+
+  &__col-1 {
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__subtitle-2 {
+    display: none;
+    text-align: center;
+    margin: 20px 0;
+  }
+
   @media (max-width: 767px) {
     &__container {
       flex-direction: row;
@@ -196,13 +211,9 @@ $main-light: lighten($main-color, 35%);
     &__items {
       display: none;
     }
-  }
-
-  &__col-1 {
-    display: flex;
-    flex-basis: 100%;
-    justify-content: center;
-    align-items: center;
+    &__subtitle-2 {
+      display: flex;
+    }
   }
 
   &__col-2 {

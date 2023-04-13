@@ -170,6 +170,18 @@
   max-width: 1000px;
   z-index: 10;
 }
+.whatWeDo__col-1 {
+  display: flex;
+  flex-basis: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.whatWeDo__subtitle-2 {
+  display: none;
+  text-align: center;
+  margin: 20px 0;
+}
 @media (max-width: 767px) {
   .whatWeDo__container {
     flex-direction: row;
@@ -177,12 +189,9 @@
   .whatWeDo__items {
     display: none;
   }
-}
-.whatWeDo__col-1 {
-  display: flex;
-  flex-basis: 100%;
-  justify-content: center;
-  align-items: center;
+  .whatWeDo__subtitle-2 {
+    display: flex;
+  }
 }
 .whatWeDo__col-2 {
   display: flex;
