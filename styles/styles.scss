@@ -14,7 +14,9 @@ $main-light: lighten($main-color, 35%);
   grid-template-rows: repeat(auto-fit, minmax(1vh, auto));
   grid-template-areas:
     "eCom"
-    "whatWeDo";
+    "whatWeDo"
+    "howItWorks"
+    "feedback";
 }
 
 .eCom {
@@ -93,7 +95,6 @@ $main-light: lighten($main-color, 35%);
     img {
       object-fit: cover;
       max-width: 100%;
-      max-height: 100%;
     }
   }
 
@@ -159,7 +160,6 @@ $main-light: lighten($main-color, 35%);
   &__dots--bottom {
     position: absolute;
     max-width: 200px;
-    max-height: 200px;
   }
   &__dots--top {
     top: 5.2%;
@@ -231,15 +231,13 @@ $main-light: lighten($main-color, 35%);
   &__form {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     background-color: #fff;
     max-width: 380px;
-    max-height: 600px;
+    min-height: 525px;
     border-radius: 15px;
     margin: 20px 0;
+    padding: 25px;
     box-shadow: 10px 10px 40px 5px rgba($main-color, 0.2);
-    > * {
-      margin: 0 40px 40px 40px;
-    }
   }
 }
