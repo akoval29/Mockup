@@ -16,7 +16,8 @@ $main-light: lighten($main-color, 35%);
     "eCom"
     "whatWeDo"
     "howItWorks"
-    "feedback";
+    "feedback"
+    "footer";
 }
 
 .eCom {
@@ -300,13 +301,13 @@ $main-light: lighten($main-color, 35%);
   &__construct--blue {
     transform: rotate(180deg);
     position: absolute;
-    bottom: 0;
+    bottom: -3%;
     left: 0;
   }
   &__construct--brown {
     transform: rotate(180deg);
     position: absolute;
-    bottom: 0;
+    bottom: -3%;
     right: 0;
   }
   @media (max-width: 600px) {
@@ -436,6 +437,193 @@ $main-light: lighten($main-color, 35%);
     &:hover {
       cursor: pointer;
       transform: scale(1.05);
+    }
+  }
+}
+
+.footer {
+  grid-area: footer;
+  display: grid;
+  grid-template-rows: 1fr 50px;
+  color: #fff;
+  background-color: $main-color;
+  z-index: 1;
+  grid-template-areas:
+    "upper"
+    "lower";
+
+  &__container-1 {
+    grid-area: upper;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 250px;
+    padding: 10px;
+    @media (max-width: 650px) {
+      flex-wrap: wrap;
+    }
+    p {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__items-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  &__title {
+    display: block;
+    cursor: pointer;
+  }
+  &__input {
+    appearance: none;
+    position: absolute;
+  }
+
+  &__item {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 30px;
+    label {
+      margin-bottom: 15px;
+      text-decoration: underline;
+    }
+    p {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__logo {
+    font-family: "Product Sans", sans-serif;
+    font-weight: bold;
+  }
+  &__logo--1 {
+    @media (max-width: 1000px) {
+      display: none;
+    }
+  }
+  &__logo--2 {
+    display: none;
+    margin-bottom: 20px;
+    @media (max-width: 1000px) {
+      display: block;
+    }
+  }
+
+  &__subscribe-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 300px;
+  }
+
+  &__subscribe-input {
+    max-width: 180px;
+    min-height: 40px;
+    margin: 5px;
+    font-style: italic;
+  }
+  &__btn {
+    background-color: #fff;
+    color: $main-color;
+    margin: 5px;
+    font-weight: bold;
+    width: 80px;
+    height: 40px;
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.05);
+    }
+  }
+
+  // Accordion
+  @media (max-width: 800px) {
+    &__items-wrap {
+      flex-direction: column;
+      margin: 20px;
+    }
+    &__item {
+      width: 250px;
+      color: white;
+      border: 1px solid $main-light;
+      border-radius: 7px;
+      margin: 0px 0px 2px 0px;
+      label {
+        margin-bottom: 0px;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 2px;
+        text-align: center;
+      }
+      p {
+        display: none;
+        padding: 10px 15px;
+        margin: 0px;
+      }
+    }
+
+    &__title {
+      padding: 10px 15px;
+      transition: background 0.2s ease-out;
+      position: relative;
+      &:after {
+        content: "";
+        display: block;
+        border-style: solid;
+        border-width: 8px 5px 0 5px;
+        border-color: $main-light transparent transparent transparent;
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+      }
+    }
+    &__input:checked ~ &__title {
+      background-color: darken($main-color, 10%);
+      border-radius: 7px;
+
+      &:after {
+        border-style: solid;
+        border-width: 0 5px 8px 5px;
+        border-color: transparent transparent $main-light transparent;
+      }
+    }
+
+    &__input:checked ~ p {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  // Accordion end
+
+  &__container-2 {
+    grid-area: lower;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid #fff;
+    img {
+      width: 30px;
+      height: 30px;
+      filter: invert(1);
+      margin-right: 10px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    @media (max-width: 600px) {
+      a {
+        display: none;
+      }
     }
   }
 }
