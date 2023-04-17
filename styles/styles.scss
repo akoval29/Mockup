@@ -31,12 +31,16 @@ $main-light: lighten($main-color, 35%);
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    min-height: 100px;
     width: 100%;
     font-family: "Poppins", sans-serif;
     font-weight: bold;
+    min-height: 100px;
   }
-
+  @media (max-width: 500px) {
+    &__header {
+      min-height: 70px;
+    }
+  }
   &__logo {
     color: $main-color;
     font-weight: bold;
@@ -74,7 +78,6 @@ $main-light: lighten($main-color, 35%);
     justify-content: center;
     align-items: center;
     width: 100%;
-    // min-height: 100%;
     padding-bottom: 60px;
   }
 
@@ -97,7 +100,6 @@ $main-light: lighten($main-color, 35%);
     display: flex;
     flex: 0 0 40%;
     max-width: 100%;
-    // height: 100%;
     justify-content: center;
     align-items: center;
     img {
@@ -121,7 +123,6 @@ $main-light: lighten($main-color, 35%);
     &__container {
       flex-wrap: wrap;
       padding-bottom: 10px;
-      // min-height: unset;
     }
     &__container-images {
       flex: 0 0 100%;
@@ -287,7 +288,6 @@ $main-light: lighten($main-color, 35%);
   flex-wrap: wrap;
   justify-content: space-around;
   padding-bottom: 150px;
-
   @media (max-width: 600px) {
     padding-bottom: 0;
   }

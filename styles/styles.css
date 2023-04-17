@@ -24,10 +24,15 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  min-height: 100px;
   width: 100%;
   font-family: "Poppins", sans-serif;
   font-weight: bold;
+  min-height: 100px;
+}
+@media (max-width: 500px) {
+  .eCom__header {
+    min-height: 70px;
+  }
 }
 .eCom__logo {
   color: #4a99d3;
