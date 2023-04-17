@@ -12,7 +12,6 @@ $main-light: lighten($main-color, 35%);
   width: 100%;
   font-family: "Roboto", sans-serif;
   grid-template-rows: repeat(auto-fit, minmax(1vh, auto));
-  gap: 50px;
   grid-template-areas:
     "eCom"
     "whatWeDo"
@@ -53,12 +52,18 @@ $main-light: lighten($main-color, 35%);
     text-decoration: none;
     margin-right: 20px;
     font-weight: bold;
+    font-size: 2rem;
     &--active {
       color: $main-color;
     }
     &:hover {
       cursor: pointer;
       color: $main-color;
+    }
+  }
+  @media (max-width: 500px) {
+    &__nav-item {
+      font-size: 1.4rem;
     }
   }
 
@@ -69,11 +74,14 @@ $main-light: lighten($main-color, 35%);
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100%;
+    // min-height: 100%;
+    padding-bottom: 60px;
   }
 
   &__container-content {
     // border: dashed 2px #19f005;
+    display: flex;
+    flex-wrap: wrap;
     flex: 1 1 auto;
     padding: 0px 80px;
     h1 {
@@ -87,11 +95,11 @@ $main-light: lighten($main-color, 35%);
   &__container-images {
     // border: dashed 2px #f0d805;
     display: flex;
-    width: 100%;
-    height: 100%;
+    flex: 0 0 40%;
+    max-width: 100%;
+    // height: 100%;
     justify-content: center;
     align-items: center;
-    flex: 0 0 40%;
     img {
       object-fit: cover;
       max-width: 100%;
@@ -101,7 +109,7 @@ $main-light: lighten($main-color, 35%);
   &__btn {
     max-width: 180px;
     min-height: 60px;
-    margin-right: 10px;
+    margin: 5px;
     border-radius: 10px;
     &:hover {
       cursor: pointer;
@@ -113,6 +121,7 @@ $main-light: lighten($main-color, 35%);
     &__container {
       flex-wrap: wrap;
       padding-bottom: 10px;
+      // min-height: unset;
     }
     &__container-images {
       flex: 0 0 100%;
@@ -120,11 +129,8 @@ $main-light: lighten($main-color, 35%);
       padding: 10px;
     }
     &__container-content {
+      justify-content: center;
       padding: 0px 20px;
-    }
-    &__btn {
-      max-width: 150px;
-      min-height: 50px;
     }
   }
 }
@@ -181,7 +187,6 @@ $main-light: lighten($main-color, 35%);
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    height: 100%;
     width: 100%;
     max-width: 1100px;
     z-index: 10;
@@ -238,5 +243,199 @@ $main-light: lighten($main-color, 35%);
     margin: 20px 0;
     padding: 25px;
     box-shadow: 10px 10px 40px 5px rgba($main-color, 0.2);
+  }
+}
+
+.howItWorks {
+  grid-area: howItWorks;
+  background-color: $main-light;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0 100px 50px 100px;
+
+  &__title {
+    margin: 40px 0;
+    width: 100%;
+    text-align: center;
+    color: $main-color;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+    min-width: 200px;
+    font-family: Roboto, sans-serif;
+    text-align: center;
+
+    padding: 25px 10px;
+  }
+}
+@media (max-width: 1000px) {
+  .howItWorks {
+    padding: 0 20px 20px 20px;
+  }
+}
+
+.feedback {
+  grid-area: feedback;
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-bottom: 150px;
+
+  @media (max-width: 600px) {
+    padding-bottom: 0;
+  }
+
+  &__dots {
+    position: absolute;
+    right: 0;
+    top: 25%;
+  }
+  &__construct--blue {
+    transform: rotate(180deg);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  &__construct--brown {
+    transform: rotate(180deg);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  @media (max-width: 600px) {
+    &__items {
+      display: none;
+    }
+  }
+
+  &__title {
+    width: 100%;
+    text-align: center;
+    font-family: "Product Sans", sans-serif;
+    letter-spacing: 2px;
+    padding: 50px 0;
+  }
+
+  &__container {
+    max-width: 677px;
+    min-height: 519px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 50%;
+    z-index: 1;
+    img {
+      object-fit: cover;
+      max-width: 100%;
+    }
+  }
+  @media (max-width: 800px) {
+    &__container {
+      flex: 1 1 100%;
+      max-width: 100%;
+      min-height: unset;
+    }
+  }
+
+  //Container 1
+  &__container--1 {
+    position: relative;
+  }
+  &__photo {
+    z-index: 1;
+  }
+  &__bg {
+    position: absolute;
+    background-color: $main-light;
+    width: 100%;
+    min-height: 400px;
+    bottom: 0;
+  }
+
+  //Container 2
+  &__container--2 {
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-direction: column;
+    position: relative;
+    padding: 0 0 115px 50px;
+  }
+  &__quote-text {
+    max-width: 500px;
+    img {
+      margin: 30px 0;
+    }
+    p {
+      margin: 0 30px 30px 0;
+      font-family: "Poppins", sans-serif;
+      font-weight: bold;
+    }
+  }
+  &__arrows {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    z-index: 2;
+  }
+
+  @media (max-width: 800px) {
+    &__container--2 {
+      padding: 0 20px 115px 20px;
+      justify-content: center;
+      align-items: center;
+    }
+    &__quote-text {
+      p {
+        margin: 0 0 30px 0;
+      }
+    }
+  }
+
+  //Container 3
+  &__container--3 {
+    padding: 20px;
+  }
+
+  //Container 4
+  &__container--4 {
+    justify-content: flex-start;
+    h3 {
+      margin-bottom: 30px;
+    }
+    p {
+      margin-bottom: 30px;
+    }
+  }
+  @media (max-width: 800px) {
+    &__container--4 {
+      justify-content: center;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 550px;
+    padding: 20px;
+  }
+
+  &__btn {
+    max-width: 180px;
+    min-height: 60px;
+    margin: 5px;
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.05);
+    }
   }
 }
