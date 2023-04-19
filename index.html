@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" href="src/favIcon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MOCKUP</title>
     <link rel="stylesheet" href="styles/styles.css" />
@@ -18,9 +19,9 @@
           </nav>
         </header>
         <article class="eCom__container">
-          <div class="eCom__container-content">
-            <h1>New E-commerce App best for You</h1>
-            <h4>
+          <div class="eCom__content">
+            <h1 class="eCom__title">New E-commerce App best for You</h1>
+            <h4 class="eCom__text">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id,
               incidunt. Quisquam quae, omnis culpa cum laudantium, quibusdam
               neque veritatis aperiam ut hic saepe iste delectus in impedit odit
@@ -38,8 +39,8 @@
             />
           </div>
           <!-- content -->
-          <div class="eCom__container-images">
-            <img src="src/mobile--pair.png" alt="eCom-mobile_img" />
+          <div class="eCom__container-image">
+            <img class="eCom__image" src="src/mobile--pair.png" alt="eCom-mobile_img" />
           </div>
         </article>
         <!-- eCom__container -->
@@ -48,6 +49,47 @@
 
 
       <section class="whatWeDo">
+
+        <div class="whatWeDo__container">
+          <h3 class="whatWeDo__subtitle-2">
+            What we do to help our customers <br />
+            in diginal era
+          </h3>
+          <div class="whatWeDo__col-1">
+            <div class="whatWeDo__form">
+              <img class="whatWeDo__form-img" src="src/card-receive.png" alt="card-receive_img" />
+              <h3 class="whatWeDo__form-title">Receive</h3>
+              <p class="whatWeDo__form-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
+                quis? Accusamus, animi, deserunt omnis a rem in voluptas illum
+                veritatis, animi, deserunt omnis a rem, sit amet consectetur adipisicing elit.
+              </p>
+              <a href="#">Learn more ➜</a>
+            </div>
+          </div>
+
+          <div class="whatWeDo__col-2">
+            <div class="whatWeDo__form">
+              <img class="whatWeDo__form-img" src="src/card-send.png" alt="card-send_img" />
+              <h3 class="whatWeDo__form-title">Send</h3>
+              <p class="whatWeDo__form-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
+                quis? Accusamus, animi, deserunt omnis a rem.
+              </p>
+              <a href="#">Learn more ➜</a>
+            </div>
+            <div class="whatWeDo__form">
+              <img class="whatWeDo__form-img" src="src/card-buy.png" alt="card-buy_img" />
+              <h3 class="whatWeDo__form-title">Buy</h3>
+              <p class="whatWeDo__form-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
+                quis? Accusamus, animi, deserunt omnis a rem in voluptas sit amet consectetur adipisicing elit.
+              </p>
+              <a href="#">Learn more ➜</a>
+            </div>
+          </div>
+        </div>
+
         <div class="whatWeDo__items">
           <h3 class="whatWeDo__subtitle-1">
             What we do to help <br />
@@ -80,46 +122,6 @@
             alt="whatWeDo_dots_bottom_img"
           />
         </div>
-
-        <div class="whatWeDo__container">
-          <h3 class="whatWeDo__subtitle-2">
-            What we do to help our customers <br />
-            in diginal era
-          </h3>
-          <div class="whatWeDo__col-1">
-            <div class="whatWeDo__form">
-              <img src="src/card-receive.png" alt="card-receive_img" />
-              <h3>Receive</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
-                quis? Accusamus, animi, deserunt omnis a rem in voluptas illum
-                veritatis, animi, deserunt omnis a rem, sit amet consectetur adipisicing elit.
-              </p>
-              <a href="#">Learn more ➜</a>
-            </div>
-          </div>
-
-          <div class="whatWeDo__col-2">
-            <div class="whatWeDo__form">
-              <img src="src/card-send.png" alt="card-send_img" />
-              <h3>Send</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
-                quis? Accusamus, animi, deserunt omnis a rem.
-              </p>
-              <a href="#">Learn more ➜</a>
-            </div>
-            <div class="whatWeDo__form">
-              <img src="src/card-buy.png" alt="card-buy_img" />
-              <h3>Buy</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
-                quis? Accusamus, animi, deserunt omnis a rem in voluptas sit amet consectetur adipisicing elit.
-              </p>
-              <a href="#">Learn more ➜</a>
-            </div>
-          </div>
-        </div>
       </section>
       <!-- whatWeDo -->
 
@@ -151,7 +153,10 @@
 
         <div class="feedback__container feedback__container--1">
           <div class="feedback__bg"></div>
-          <img class="feedback__photo" src="src/image1.png" alt="feedback__Paulina_img" />
+          <img class="feedback__photo feedback__photo--active" src="src/image1.png" alt="feedback__Paulina_img" />
+          <img class="feedback__photo" src="src/image2.png" alt="feedback__Paulina_img" />
+          <img class="feedback__photo" src="src/image3.png" alt="feedback__Paulina_img" />
+          <img class="feedback__photo" src="src/image4.png" alt="feedback__Paulina_img" />
         </div>
 
         <div class="feedback__container feedback__container--2">
@@ -162,18 +167,23 @@
               src="src/quote.png"
               alt="feedback__quote_img"
             />
-
-            <p>
+            <p class="feedback__text">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa
               totam fugit impedit! Dignissimos repellat excepturi delectus illum
               maiores commodi eligendi ut.
             </p>
-            <h3>Angel Paulina</h3>
+            <h3 class="feedback__author">Angel Paulina</h3>
           </div>
+
           <img
-            class="feedback__arrows"
-            src="src/arrows.png"
-            alt="feedback__arrows_img"
+            class="feedback__arrow-prev"
+            src="src/arrow-prev.png"
+            alt="feedback__arrow-prev_img"
+          />
+          <img
+            class="feedback__arrow-next"
+            src="src/arrow-next.png"
+            alt="feedback__arrow-next_img"
           />
         </div>
 
@@ -233,29 +243,29 @@
             <div class="footer__item">
               <input class="footer__input" type="checkbox" id="footer1">
               <label class="footer__title" for="footer1">Quick Links</label>
-              <p>Sign Up</p>
-              <p>About Us</p>
+              <p class="footer__li">Sign Up</p>
+              <p class="footer__li">About Us</p>
             </div>
             <div class="footer__item">
               <input class="footer__input" type="checkbox" id="footer2">
               <label class="footer__title" for="footer2">Others</label>
-              <p>User FAQs</p>
-              <p>Contact Us</p>
-              <p>Legal</p>
-              <p>Privacy Policy</p>
-              <p>Terms and Conditions</p>
+              <p class="footer__li">User FAQs</p>
+              <p class="footer__li">Contact Us</p>
+              <p class="footer__li">Legal</p>
+              <p class="footer__li">Privacy Policy</p>
+              <p class="footer__li">Terms and Conditions</p>
             </div>
             <div class="footer__item">
               <input class="footer__input" type="checkbox" id="footer3">
               <label class="footer__title" for="footer3">Products</label>
-              <p>Send</p>
-              <p>Receive</p>
-              <p>Buy</p>
+              <p class="footer__li">Send</p>
+              <p class="footer__li">Receive</p>
+              <p class="footer__li">Buy</p>
             </div>
           </div>
           <div class="footer__subscribe-container">
             <h1 class="footer__logo footer__logo--2">LOGO</h1>
-            <p>
+            <p class="footer__subscribe-text">
               Subscribe to our newsletter and be the first to know about our
               updates
             </p>
@@ -277,21 +287,25 @@
         </section>
 
         <section class="footer__container-2">
-          <a>Copyright @ 2020. All right reserved.</a>
+          <a class="footer__c2-title"> Copyright @ 2020. All right reserved.</a>
           <div class="footer__social-container">
             <img
+              class="footer__social-icon"
               src="https://cdn-icons-png.flaticon.com/512/3938/3938035.png"
               alt="icon-youtube"
             />
             <img
+              class="footer__social-icon"
               src="https://cdn-icons-png.flaticon.com/512/1384/1384031.png"
               alt="icon-insagram"
             />
             <img
+              class="footer__social-icon"
               src="https://cdn-icons-png.flaticon.com/512/254/254390.png"
               alt="img-facebook"
             />
             <img
+              class="footer__social-icon"
               src="https://cdn-icons-png.flaticon.com/512/25/25347.png"
               alt="img-twitter"
             />
@@ -303,5 +317,6 @@
 
     </article>
     <!-- main -->
+    <script src="js/script.js"></script>
   </body>
 </html>

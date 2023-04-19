@@ -70,26 +70,26 @@
   width: 100%;
   padding-bottom: 60px;
 }
-.eCom__container-content {
+.eCom__content {
   display: flex;
   flex-wrap: wrap;
   flex: 1 1 auto;
   padding: 0px 80px;
 }
-.eCom__container-content h1 {
+.eCom__title {
   margin-bottom: 20px;
 }
-.eCom__container-content h4 {
+.eCom__text {
   margin-bottom: 50px;
 }
-.eCom__container-images {
+.eCom__container-image {
   display: flex;
   flex: 0 0 40%;
   max-width: 100%;
   justify-content: center;
   align-items: center;
 }
-.eCom__container-images img {
+.eCom__image {
   -o-object-fit: cover;
      object-fit: cover;
   max-width: 100%;
@@ -109,11 +109,11 @@
     flex-wrap: wrap;
     padding-bottom: 10px;
   }
-  .eCom__container-images {
+  .eCom__container-image {
     flex: 0 0 100%;
     padding: 10px;
   }
-  .eCom__container-content {
+  .eCom__content {
     justify-content: center;
     padding: 0px 20px;
   }
@@ -149,13 +149,13 @@
   padding: 0 35px 35px 35px;
   box-shadow: 10px 10px 40px 5px rgba(74, 153, 211, 0.2);
 }
-.whatWeDo__form img {
+.whatWeDo__form-img {
   margin: 50px auto;
 }
-.whatWeDo__form h3 {
+.whatWeDo__form-title {
   margin-bottom: 30px;
 }
-.whatWeDo__form p {
+.whatWeDo__form-text {
   margin-bottom: 50px;
 }
 .whatWeDo__col-1, .whatWeDo__col-2 {
@@ -171,6 +171,16 @@
   justify-content: space-around;
   flex-direction: column;
 }
+.whatWeDo__subtitle-1 {
+  position: absolute;
+  top: 12%;
+  left: 15%;
+}
+.whatWeDo__subtitle-2 {
+  display: none;
+  text-align: center;
+  padding: 20px 10px;
+}
 @media (max-width: 767px) {
   .whatWeDo__container {
     flex-direction: row;
@@ -181,16 +191,6 @@
   .whatWeDo__subtitle-2 {
     display: flex;
   }
-}
-.whatWeDo__subtitle-2 {
-  display: none;
-  text-align: center;
-  padding: 20px 10px;
-}
-.whatWeDo__subtitle-1 {
-  position: absolute;
-  top: 12%;
-  left: 15%;
 }
 .whatWeDo__construct--brown {
   position: absolute;
@@ -297,11 +297,6 @@
   flex: 1 1 50%;
   z-index: 1;
 }
-.feedback__container img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  max-width: 100%;
-}
 @media (max-width: 800px) {
   .feedback__container {
     flex: 1 1 100%;
@@ -313,7 +308,17 @@
   position: relative;
 }
 .feedback__photo {
+  position: absolute;
+  bottom: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 100%;
   z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.feedback__photo--active {
+  opacity: 1;
 }
 .feedback__bg {
   position: absolute;
@@ -332,27 +337,43 @@
 .feedback__quote-text {
   max-width: 500px;
 }
-.feedback__quote-text img {
+.feedback__quote {
   margin: 30px 0;
 }
-.feedback__quote-text p {
+.feedback__text {
   margin-bottom: 30px;
   font-family: "Poppins", sans-serif;
   font-weight: bold;
 }
-.feedback__arrows {
+.feedback__arrow-next, .feedback__arrow-prev {
   position: absolute;
-  bottom: 0;
-  right: 20px;
+  bottom: 20px;
+  border: 1px solid black;
   z-index: 2;
 }
+.feedback__arrow-next:active, .feedback__arrow-prev:active {
+  transform: scale(0.95);
+}
+.feedback__arrow-prev {
+  right: 100px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.feedback__arrow-next {
+  right: 20px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
 @media (max-width: 800px) {
+  .feedback__container--1 {
+    padding-top: 500px;
+  }
   .feedback__container--2 {
     padding: 0 20px 115px 20px;
     justify-content: center;
     align-items: center;
   }
-  .feedback__quote-text p {
+  .feedback__text {
     margin: 0 0 30px 0;
   }
 }
@@ -401,11 +422,6 @@
   flex: 1 1 50%;
   z-index: 1;
 }
-.mobile__container img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  max-width: 100%;
-}
 @media (max-width: 800px) {
   .mobile__container {
     flex: 1 1 100%;
@@ -415,6 +431,11 @@
 }
 .mobile__container--3 {
   padding: 20px;
+}
+.mobile__container-3-mobile {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 100%;
 }
 .mobile__container--4 h3 {
   margin-bottom: 30px;
@@ -432,6 +453,8 @@
   padding: 20px;
 }
 .mobile__btn {
+  -o-object-fit: cover;
+     object-fit: cover;
   max-width: 180px;
   min-height: 60px;
   margin: 5px;
@@ -465,15 +488,14 @@
     flex-wrap: wrap;
   }
 }
-.footer__container-1 p:hover {
-  cursor: pointer;
-}
 .footer__items-wrap {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
 }
 .footer__title {
+  margin-bottom: 15px;
+  text-decoration: underline;
   display: block;
   cursor: pointer;
 }
@@ -490,12 +512,11 @@
   justify-content: space-between;
   margin-right: 30px;
 }
-.footer__item label {
-  margin-bottom: 15px;
-  text-decoration: underline;
-}
-.footer__item p {
+.footer__li {
   margin-bottom: 10px;
+}
+.footer__li:hover {
+  cursor: pointer;
 }
 .footer__logo {
   font-family: "Product Sans", sans-serif;
@@ -524,14 +545,14 @@
   justify-content: center;
   max-width: 300px;
 }
-.footer__subscribe-container p {
-  margin-bottom: 20px;
-}
 .footer__subscribe-input {
   max-width: 180px;
   min-height: 40px;
   margin: 5px;
   font-style: italic;
+}
+.footer__subscribe-text {
+  margin-bottom: 15px;
 }
 .footer__btn {
   background-color: #fff;
@@ -557,19 +578,17 @@
     border-radius: 7px;
     margin: 0px 0px 2px 0px;
   }
-  .footer__item label {
-    margin-bottom: 0px;
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: 2px;
-    text-align: center;
-  }
-  .footer__item p {
+  .footer__li {
     display: none;
     padding: 10px 15px;
     margin: 0px;
   }
   .footer__title {
+    margin-bottom: 0px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    text-align: center;
     padding: 10px 15px;
     transition: background 0.2s ease-out;
     position: relative;
@@ -595,7 +614,7 @@
     border-width: 0 5px 8px 5px;
     border-color: transparent transparent #daeaf6 transparent;
   }
-  .footer__input:checked ~ p {
+  .footer__input:checked ~ .footer__li {
     display: flex;
     justify-content: center;
     border-bottom-left-radius: 7px;
@@ -610,17 +629,17 @@
   align-items: center;
   border-top: 1px solid #fff;
 }
-.footer__container-2 img {
+.footer__social-icon {
   width: 30px;
   height: 30px;
   filter: invert(1);
   margin-right: 10px;
 }
-.footer__container-2 img:hover {
+.footer__social-icon:hover {
   cursor: pointer;
 }
 @media (max-width: 600px) {
-  .footer__container-2 a {
+  .footer__c2-title {
     display: none;
   }
 }/*# sourceMappingURL=styles.css.map */
